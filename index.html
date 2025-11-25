@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Théo Jeanmart - Robotics & AI Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2E64A0; /* Ton Bleu Chambray */
+            --dark-color: #113359;    /* Ton Bleu Marine */
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--text-color); background-color: var(--bg-color); }
+        a { text-decoration: none; color: inherit; }
+
+        /* HEADER */
+        header {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.5rem; font-weight: 300; opacity: 0.9; }
+        .social-links { margin-top: 20px; }
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .social-links a:hover { color: var(--primary-color); }
+
+        /* SECTIONS */
+        section { padding: 3rem 2rem; max-width: 1100px; margin: 0 auto; }
+        h2 { 
+            text-align: center; 
+            margin-bottom: 2rem; 
+            color: var(--dark-color); 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            position: relative;
+        }
+        h2::after {
+            content: ''; display: block; width: 50px; height: 3px;
+            background: var(--primary-color); margin: 10px auto 0;
+        }
+
+        /* ABOUT */
+        .about-text { text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+
+        /* PROJECTS GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover { transform: translateY(-5px); }
+        .card-content { padding: 1.5rem; }
+        .card-content h3 { color: var(--primary-color); margin-bottom: 10px; }
+        .tech-stack { margin-top: 15px; display: flex; flex-wrap: wrap; gap: 5px; }
+        .tech-badge {
+            background: #e1e8f0; color: var(--dark-color);
+            padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;
+        }
+        .project-link {
+            display: inline-block; margin-top: 15px; color: var(--primary-color); font-weight: bold;
+        }
+
+        /* SKILLS */
+        .skills-container { text-align: center; }
+        .skill-category { margin-bottom: 1.5rem; }
+        .skill-tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+        }
+
+        /* CONTACT / FOOTER */
+        footer {
+            background: var(--dark-color); color: var(--white);
+            text-align: center; padding: 2rem; margin-top: 3rem;
+        }
+        .btn {
+            display: inline-block; background: var(--primary-color); color: var(--white);
+            padding: 10px 20px; border-radius: 5px; margin-top: 20px;
+        }
+        .btn:hover { background: #3a7bc8; }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            section { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Théo Jeanmart</h1>
+        <p>Engineering Student in Robotics & AI</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/theo-jeanmart-433717214" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/TON-USER-GITHUB" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:theo.jeanmart@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <a href="cv_theo_jeanmart.pdf" class="btn" target="_blank"><i class="fas fa-download"></i> Download Resume</a>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="about-text">
+            French engineering student at <strong>UPSSITECH (University of Toulouse)</strong> seeking an internship in the <strong>Automotive Industry</strong>. 
+            Passionate about mobile robotics, ROS, and autonomous driving systems. I combine strong theoretical knowledge in Computer Science & AI with practical experience in building and programming robots.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>🏎️ Vision-based Navigation</h3>
+                    <p><strong>Formula Student (TLSE Racing)</strong></p>
+                    <p>Development of an autonomous navigation system for a racing car using computer vision. Implementation of path planning algorithms.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">ROS</span>
+                        <span class="tech-badge">OpenCV</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">C++</span>
+                    </div>
+                    <a href="https://www.tlseracing.fr/" target="_blank" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>🤖 Autonomous Mobile Platform</h3>
+                    <p>Assembling and programming of a mobile robotic platform from scratch. Developed control software for autonomous movement.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">C++</span>
+                        <span class="tech-badge">Control Theory</span>
+                        <span class="tech-badge">Embedded</span>
+                    </div>
+                    <a href="#" class="project-link">View Code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>🏠 Smart Rolling Shutter</h3>
+                    <p>Creation of a remotely controlled motorised shutter system. Hardware integration and software control.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">IoT</span>
+                        <span class="tech-badge">Electronics</span>
+                        <span class="tech-badge">C</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <span class="skill-tag">ROS / ROS2</span>
+                <span class="skill-tag">Robotic Kinematics</span>
+                <span class="skill-tag">Mobile Robotics</span>
+                <span class="skill-tag">SLAM</span>
+            </div>
+            <div class="skill-category">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Git</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Théo Jeanmart. Designed with code.</p>
+        <p><i class="fas fa-map-marker-alt"></i> Toulouse, France</p>
+    </footer>
+
+</body>
+</html>
